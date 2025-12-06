@@ -1,9 +1,35 @@
-/* CSS by ///ADD/// YOUR NAME */
+/* CSS by Mudi Erhueh*/
 
 /* Imported Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@0,18..144,87..112,300..900;1,18..144,87..112,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* ///ADD/// CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 
 
 /* Root Variables */
@@ -40,6 +66,7 @@ body.dark-mode {
 
 /* ///ADD/// Skip Link Styles */
 
+
 /* ///ADD/// Navigation Styles */
 
 /* ///ADD/// Global Layout Styles */
@@ -57,7 +84,33 @@ body.dark-mode {
 
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
+@media (prefers-color-scheme: light){
+  body{
+    background-color: var(--watchdog-white);
+    color: var(--truth-text);
+  }
+}
 
+@media (prefers-color-scheme: dark){
+  body{
+    background-color: var(--truth-text);
+    color: var(--watchdog-white);
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  #breaking-news section{
+    transform: none;
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  #article section{
+    transform: none;
+    animation: none;
+  }
+}
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
